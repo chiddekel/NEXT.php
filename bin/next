@@ -24,6 +24,16 @@ if (!$loaded) {
 
 use Next\Cli\Application;
 
-$app = new Application(getcwd() ?: '.');
+$projectDir = getcwd() ?: '.';
+$repositoryDir = dirname(__DIR__);
+if (realpath($projectDir) === realpath($repositoryDir)
+    && !is_dir($projectDir . '/app')
+    && is_dir($repositoryDir . '/example/app')
+) {
+    $projectDir = $repositoryDir . '/example';
+    chdir($projectDir);
+}
+
+$app = new Application($projectDir);
 $exitCode = $app->run($argv);
 exit($exitCode);

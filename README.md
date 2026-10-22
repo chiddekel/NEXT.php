@@ -114,7 +114,20 @@ No Node.js, no Webpack/Vite overhead, no hydration mismatches, and **zero runtim
 
 ### 1. Installation
 
-Clone or install via Composer:
+To run the bundled application from a cloned repository:
+
+```bash
+composer install
+./bin/next dev
+```
+
+Open http://localhost:3000. When run from this repository's root without an
+`app/` directory, the CLI automatically uses the bundled demo in `example/`.
+From any other directory, the CLI uses the current working directory as the
+application root. You can also run `cd example` followed by `../bin/next dev`.
+
+To create your own application instead, install the framework via Composer
+in your application directory, then follow steps 2 and 3:
 
 ```bash
 composer require nextphp/next
@@ -179,7 +192,7 @@ HTML;
 ### 3. Launch Development Server
 
 ```bash
-./bin/next dev
+./vendor/bin/next dev
 ```
 
 ```text
@@ -378,9 +391,16 @@ graph TD
 
 ### 1. Build Production Assets
 
+For the bundled demo, run from the repository root:
+
 ```bash
-./bin/next build
+cd example
+../bin/next build
 ```
+
+For your own Composer-installed application, run `./vendor/bin/next build`
+from the directory containing your `app/` folder. Build output is written
+to `.next/` inside that application directory.
 
 ```text
    ☼ NEXT.php 1.0.0
