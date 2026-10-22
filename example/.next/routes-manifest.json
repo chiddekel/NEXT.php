@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "pages": [
+        {
+            "pattern": "/pricing",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/(marketing)/pricing/page.php",
+            "static": true,
+            "staticHtml": "/home/developer/Projekty/NEXT.js/example/.next/static/pricing.html"
+        },
+        {
+            "pattern": "/blog",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/blog/page.php",
+            "static": true,
+            "staticHtml": "/home/developer/Projekty/NEXT.js/example/.next/static/blog.html"
+        },
+        {
+            "pattern": "/blog/[slug]",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/blog/[slug]/page.php",
+            "static": false
+        },
+        {
+            "pattern": "/",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/page.php",
+            "static": true,
+            "staticHtml": "/home/developer/Projekty/NEXT.js/example/.next/static/index.html"
+        },
+        {
+            "pattern": "/docs/[...slug]",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/docs/[...slug]/page.php",
+            "static": false
+        }
+    ],
+    "api": [
+        {
+            "pattern": "/api/hello",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/api/hello/route.php"
+        },
+        {
+            "pattern": "/api/posts/[id]",
+            "file": "/home/developer/Projekty/NEXT.js/example/app/api/posts/[id]/route.php"
+        }
+    ]
+}

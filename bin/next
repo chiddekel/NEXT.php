@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$autoloadPaths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
+];
+
+$loaded = false;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        require_once $path;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    fwrite(STDERR, "Unable to find composer autoload.php. Please run 'composer install'.\n");
+    exit(1);
+}
+
+use Next\Cli\Application;
+
+$app = new Application(getcwd() ?: '.');
+$exitCode = $app->run($argv);
+exit($exitCode);

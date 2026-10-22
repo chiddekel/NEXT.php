@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">NEXT.php — synthwave sunset</title>
+  <desc id="desc">A striped golden and pink sun behind the chrome NEXT.php wordmark, above a cyan perspective grid on a dark purple sky.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#0c0820"/>
+      <stop offset="1" stop-color="#261040"/>
+    </linearGradient>
+    <radialGradient id="haze">
+      <stop stop-color="#ed218b" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#ed218b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sun" x2="0" y2="1">
+      <stop stop-color="#fff29a"/>
+      <stop offset=".38" stop-color="#ffb347"/>
+      <stop offset=".7" stop-color="#ff4b93"/>
+      <stop offset="1" stop-color="#da26c4"/>
+    </linearGradient>
+    <linearGradient id="chrome" x2="0" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset=".46" stop-color="#b9f4ff"/>
+      <stop offset=".49" stop-color="#6185c9"/>
+      <stop offset=".51" stop-color="#30245f"/>
+      <stop offset=".56" stop-color="#ff80d5"/>
+      <stop offset="1" stop-color="#ffdeef"/>
+    </linearGradient>
+    <linearGradient id="grid" x2="0" y2="1">
+      <stop stop-color="#44e7f2" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#44e7f2" stop-opacity=".55"/>
+    </linearGradient>
+    <clipPath id="disc">
+      <circle cx="600" cy="200" r="155"/>
+    </clipPath>
+    <mask id="stripes">
+      <rect width="1200" height="480" fill="white"/>
+      <path d="M440 203h320v5H440z M440 225h320v7H440z M440 249h320v10H440z M440 275h320v13H440z M440 303h320v17H440z M440 333h320v22H440z" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="1200" height="480" rx="16" fill="url(#sky)"/>
+  <ellipse cx="600" cy="238" rx="460" ry="235" fill="url(#haze)"/>
+  <g fill="#e3deff" opacity=".65">
+    <circle cx="133" cy="86" r="1.5"/>
+    <circle cx="270" cy="151" r="1"/>
+    <circle cx="369" cy="62" r="1.5"/>
+    <circle cx="842" cy="101" r="1"/>
+    <circle cx="1052" cy="63" r="1.5"/>
+    <circle cx="982" cy="177" r="1"/>
+    <circle cx="181" cy="228" r="1"/>
+  </g>
+  <g clip-path="url(#disc)" mask="url(#stripes)">
+    <rect x="445" y="45" width="310" height="310" fill="url(#sun)"/>
+  </g>
+  <path d="M0 359H1200" stroke="#ff4fa6" stroke-opacity=".65"/>
+  <path d="M0 375H1200 M0 399H1200 M0 433H1200 M0 479H1200
+           M600 359 0 480 M600 359 200 480 M600 359 400 480
+           M600 359 600 480 M600 359 800 480 M600 359 1000 480 M600 359 1200 480"
+        fill="none" stroke="url(#grid)"/>
+  <g transform="translate(600 0) skewX(-9)" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="132" font-weight="900" letter-spacing="-6">
+    <text x="47" y="312" fill="#ed279e" stroke="#ed279e" stroke-width="3" opacity=".65">NEXT.php</text>
+    <text x="42" y="306" fill="url(#chrome)" stroke="#f0d7ff" stroke-width="1.5" paint-order="stroke fill">NEXT.php</text>
+  </g>
+  <text x="600" y="342" fill="#9df5ff" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" letter-spacing="6">THE APP ROUTER FOR PHP</text>
+</svg>

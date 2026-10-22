@@ -1,0 +1,36 @@
+{
+  "name": "nextphp/next",
+  "description": "NEXT.php - Next.js App Router framework reimagined for PHP with SOLID and YAGNI principles",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["nextjs", "framework", "ssr", "ssg", "router", "php"],
+  "authors": [
+    {
+      "name": "NEXT.php Team",
+      "email": "dev@nextphp.dev"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0 || ^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Next\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Next\\Tests\\": "tests/"
+    }
+  },
+  "bin": [
+    "bin/next"
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

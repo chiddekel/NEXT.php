@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pricing Plans - NEXT.php</title>
+    <meta name="description" content="The React-free Next.js App Router framework for PHP 8.5+">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta injected automatically -->
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: #111; background: #fff; line-height: 1.6; }
+        header { border-bottom: 1px solid #eaeaea; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: 800; font-size: 20px; letter-spacing: -0.5px; }
+        .logo span { background: #000; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 14px; margin-left: 6px; }
+        nav { display: flex; gap: 6px; align-items: center; }
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #000;
+            background: #f4f4f4;
+        }
+        .nav-link.is-active, .nav-link[aria-current="page"] {
+            color: #0070f3 !important;
+            font-weight: 600 !important;
+            background: #e6f0ff !important;
+        }
+        main { max-width: 900px; margin: 0 auto; padding: 40px 20px; min-height: 80vh; }
+        footer { border-top: 1px solid #eaeaea; padding: 24px; text-align: center; color: #888; font-size: 14px; }
+        .card { border: 1px solid #eaeaea; border-radius: 8px; padding: 20px; margin-bottom: 20px; transition: border-color 0.2s; }
+        .card:hover { border-color: #0070f3; }
+        code { background: #fafafa; border: 1px solid #eaeaea; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NEXT<span>php</span></div>
+        <nav id="nav">
+            <a href="/" data-next-link="true" class="nav-link">Home</a>
+            <a href="/blog" data-next-link="true" class="nav-link">Blog</a>
+            <a href="/pricing" data-next-link="true" class="nav-link is-active" aria-current="page">Pricing</a>
+            <a href="/docs/getting-started" data-next-link="true" class="nav-link">Docs</a>
+        </nav>
+    </header>
+    <main id="swup" class="transition-fade">
+        <div style="text-align: center; margin-bottom: 40px;">
+    <h1>Simple, Predictable Pricing</h1>
+    <p style="color:#666;">Route Group demonstration: <code>app/(marketing)/pricing/page.php</code> mapped to <code>/pricing</code></p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+    <div class="card" style="text-align:center;">
+        <h3>Open Source</h3>
+        <div style="font-size: 32px; font-weight: 800; margin: 16px 0;">$0</div>
+        <p style="color:#666;">Free forever under MIT license.</p>
+        <button style="background:#000;color:#fff;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;">Get Started</button>
+    </div>
+    <div class="card" style="text-align:center;border-color:#0070f3;">
+        <h3>Enterprise</h3>
+        <div style="font-size: 32px; font-weight: 800; margin: 16px 0; color:#0070f3;">Custom</div>
+        <p style="color:#666;">Dedicated support & custom deployment.</p>
+        <button style="background:#0070f3;color:#fff;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;">Contact Us</button>
+    </div>
+</div>
+    </main>
+    <footer>
+        Powered by <strong>NEXT.php</strong> &bull; SOLID &bull; YAGNI &bull; Swup.js Enabled
+    </footer>
+</body>
+</html>
